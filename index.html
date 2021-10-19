@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <script src="https://www.paypal.com/sdk/js?client-id=AUP8S9L4216PG8rvIugy1jZgqnjk9PQrZskk_87AYPboZyoQRXGwjgrQVYQbPnDdmQe3ZOGdJCJQbgBb&currency=USD"></script>
         <header>
             <nav class="navbar navbar-expand-sm d-none d-md-block mb-5 p-2">
                 <div class="container-fluid">
@@ -109,34 +110,117 @@
                       claves privadas), y las carteras de papel (codigo QR impreso en un papel). <br>
                       Crypto In Time &copy;</p>
                 </div>
-                <div id="promos" class="col-sm-6 col-md-6 col-lg-8 row g-3">
-                    <div>
-                      <a target="_blank" href="https://www.paypal.com/es/home">
-                        <button class="paypal-button" href="">1&nbsp;Month&nbsp;15$<br>PayPal</button>
-                      </a>
-                      <a target="_blank" href="https://www.skrill.com/en/?gclsrc=ds&gclsrc=ds">
-                        <button class="skrill-button">1&nbsp;Month&nbsp;15$<br>Skrill</button>
-                      </a>
-                    </div>
-                    <div>
-                      <a target="_blank" href="https://www.paypal.com/es/home">
-                        <button class="paypal-button">3&nbsp;Months&nbsp;30$<br>PayPal</button>
-                      </a>
-                      <a target="_blank" href="https://www.skrill.com/en/?gclsrc=ds&gclsrc=ds">
-                        <button class="skrill-button">3&nbsp;Months&nbsp;30$<br>Skrill</button>
-                      </a>
-                    </div>
-                    <div>
-                      <a target="_blank" href="https://www.paypal.com/es/home">
-                        <button class="paypal-button">1&nbsp;Year&nbsp;100$<br>PayPal</button>
-                      </a>
-                      <a target="_blank" href="https://www.skrill.com/en/?gclsrc=ds&gclsrc=ds">
-                        <button class="skrill-button">1&nbsp;Year&nbsp;100$<br>Skrill</button>
-                      </a>
-                    </div>
-                </div>
+                <div id="promos" class="col-sm-6 col-md-6 col-lg-8">
+                  <div class="row justify-content-evenly">
+                    <div class="col justify-content-center">
+                      1 Month<br>$15
+                      <div id="paypal-button-container1"></div>
 
-              </div>
+                        <script>
+                          paypal.Buttons({
+                          
+                            // Sets up the transaction when a payment button is clicked
+                            createOrder: function(data, actions) {
+                              return actions.order.create({
+                                purchase_units: [{
+                                  amount: {
+                                    value: '15' // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                                  }
+                                }]
+                              });
+                            },
+                            
+                            // Finalize the transaction after payer approval
+                            onApprove: function(data, actions) {
+                              return actions.order.capture().then(function(orderData) {
+                                // Successful capture! For dev/demo purposes:
+                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                                // When ready to go live, remove the alert and show a success message within this page. For example:
+                                    var element = document.getElementById('paypal-button-container1');
+                                    element.innerHTML = '';
+                                    element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                // Or go to another URL:  actions.redirect('thank_you.html');
+                              });
+                            }
+                          }).render('#paypal-button-container1');
+                        
+                        </script>
+                    </div>
+                    <div class="col justify-content-center">
+                      3 Months<br>$30
+                      <div id="paypal-button-container2"></div>
+
+                        <script>
+                          paypal.Buttons({
+                          
+                            // Sets up the transaction when a payment button is clicked
+                            createOrder: function(data, actions) {
+                              return actions.order.create({
+                                purchase_units: [{
+                                  amount: {
+                                    value: '30' // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                                  }
+                                }]
+                              });
+                            },
+                            
+                            // Finalize the transaction after payer approval
+                            onApprove: function(data, actions) {
+                              return actions.order.capture().then(function(orderData) {
+                                // Successful capture! For dev/demo purposes:
+                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                                // When ready to go live, remove the alert and show a success message within this page. For example:
+                                    var element = document.getElementById('paypal-button-container2');
+                                    element.innerHTML = '';
+                                    element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                // Or go to another URL:  actions.redirect('thank_you.html');
+                              });
+                            }
+                          }).render('#paypal-button-container2');
+                        
+                        </script>
+                    </div>
+                    <div class="col justify-content-center">
+                      1 Year<br>$100
+                      <div id="paypal-button-container3"></div>
+
+                        <script>
+                          paypal.Buttons({
+                          
+                            // Sets up the transaction when a payment button is clicked
+                            createOrder: function(data, actions) {
+                              return actions.order.create({
+                                purchase_units: [{
+                                  amount: {
+                                    value: '100' // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                                  }
+                                }]
+                              });
+                            },
+                            
+                            // Finalize the transaction after payer approval
+                            onApprove: function(data, actions) {
+                              return actions.order.capture().then(function(orderData) {
+                                // Successful capture! For dev/demo purposes:
+                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                                // When ready to go live, remove the alert and show a success message within this page. For example:
+                                    var element = document.getElementById('paypal-button-container3');
+                                    element.innerHTML = '';
+                                    element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                // Or go to another URL:  actions.redirect('thank_you.html');
+                              });
+                            }
+                          }).render('#paypal-button-container3');
+                        
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
         </div>
     
 

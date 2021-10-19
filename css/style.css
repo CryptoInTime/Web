@@ -74,7 +74,9 @@ header {
 }
 
 #promos {
-    font-size: 120%;
+    font-size: 150%;
+    text-align: center;
+    justify-content: center;
     padding: 1%;
     color: white;
     height: 500px;
