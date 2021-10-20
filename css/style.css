@@ -21,7 +21,7 @@ body {
 
 header {
     padding: 0px;
-    background-color: gray;
+    background-color: #343434;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-sizing: border-box;
@@ -35,7 +35,7 @@ header {
 }
 
 .navbar-text {
-    color: rgb(236, 214, 84);
+    color: #F3B438;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
 }
 
@@ -47,11 +47,11 @@ header {
 }
 .nav-link{
 
-    color: rgb(236, 214, 84);
+    color: #F3B438;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
 }
 .nav-link:visited{
-    color: rgb(236, 214, 84);
+    color: #F3B438;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
 }
 .nav-link:hover {
@@ -68,14 +68,17 @@ header {
 #content {
     background-color: rgba(169, 169, 169, 0.253);
     background-clip:content-box;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
     padding: 1%;
     color: white;
     border-radius: 30px;
 }
 
 #promos {
-    font-size: 150%;
+    font-size: 200%;
+    font-weight: bold;
     text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
     justify-content: center;
     padding: 1%;
     color: white;
