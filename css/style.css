@@ -32,7 +32,7 @@ header {
     font-size: 150%;
     text-align: center;
     align-items: center;
-    box-shadow: 0px 0px 20px 5px rgb(243, 181, 56);
+    /*box-shadow: 0px 0px 20px 5px rgb(243, 181, 56);*/
 }
 
 .navbar-text {
@@ -117,4 +117,11 @@ a {
     text-decoration-style: none;
     text-decoration-line: none;
 
+}
+
+#tickers {
+    box-shadow: 0px 0px 20px 5px rgb(243, 181, 56);
+    font-weight: bold;
+    font-size: 120%;
+    background-color: black;
 }
