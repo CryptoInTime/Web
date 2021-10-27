@@ -4,7 +4,7 @@ let btcUsdtElement = document.getElementById('btc-usdt');
 
 ws1.onmessage = (event) => {
     let btcUsdtObject = JSON.parse(event.data);
-    btcUsdtElement.innerText = btcUsdtObject.s + '  $' + parseFloat(btcUsdtObject.c).toLocaleString();
+    btcUsdtElement.innerHTML = '<div>'+btcUsdtObject.s + '  - <span id="price">$' + parseFloat(btcUsdtObject.c).toLocaleString()+'<span><div>';
 }
 
 let ws2 = new WebSocket('wss://stream.binance.com:9443/ws/ethusdt@ticker');
@@ -13,7 +13,7 @@ let ethUsdtElement = document.getElementById('eth-usdt');
 
 ws2.onmessage = (event) => {
     let ethUsdtObject = JSON.parse(event.data);
-    ethUsdtElement.innerText = ethUsdtObject.s + '  $' + parseFloat(ethUsdtObject.c).toLocaleString();
+    ethUsdtElement.innerHTML = '<div>'+ethUsdtObject.s + '  - <span id="price">$' + parseFloat(ethUsdtObject.c).toLocaleString()+'<span><div>';
 }
 
 
@@ -23,7 +23,7 @@ let bnbUsdtElement = document.getElementById('bnb-usdt');
 
 ws3.onmessage = (event) => {
     let bnbUsdtObject = JSON.parse(event.data);
-    bnbUsdtElement.innerText = bnbUsdtObject.s + '  $' + parseFloat(bnbUsdtObject.c).toLocaleString();
+    bnbUsdtElement.innerHTML = '<div>'+bnbUsdtObject.s + '  - <span id="price">$' + parseFloat(bnbUsdtObject.c).toLocaleString()+'<span><div>';
 }
 
 let ws4 = new WebSocket('wss://stream.binance.com:9443/ws/adausdt@ticker');
@@ -32,7 +32,7 @@ let adaUsdtElement = document.getElementById('ada-usdt');
 
 ws4.onmessage = (event) => {
     let adaUsdtObject = JSON.parse(event.data);
-    adaUsdtElement.innerText = adaUsdtObject.s + '  $' + parseFloat(adaUsdtObject.c).toLocaleString();
+    adaUsdtElement.innerHTML = '<div>'+adaUsdtObject.s + '  - <span id="price">$' + parseFloat(adaUsdtObject.c).toLocaleString()+'<span><div>';
 }
 
 let ws5 = new WebSocket('wss://stream.binance.com:9443/ws/solusdt@ticker');
@@ -41,5 +41,5 @@ let solUsdtElement = document.getElementById('sol-usdt');
 
 ws5.onmessage = (event) => {
     let solUsdtObject = JSON.parse(event.data);
-    solUsdtElement.innerText = solUsdtObject.s + '  $' + parseFloat(solUsdtObject.c).toLocaleString();
+    solUsdtElement.innerHTML = '<div>'+solUsdtObject.s + '  - <span id="price">$' + parseFloat(solUsdtObject.c).toLocaleString()+'<span><div>';
 }
