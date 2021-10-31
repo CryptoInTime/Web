@@ -6,15 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto In Time</title>
     <link rel="shortcut icon" type="image/png" href="images/CIT-LOGO-SOLO.png"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  
-  
-  
           <header>
             <nav class="navbar navbar-expand-sm d-none d-md-block mb-4 p-2">
                 <div class="container-fluid">
@@ -92,11 +89,11 @@
         <div id="tickers" class="container-fluid mb-4">
           <div class="row justify-content-evenly">
             
-              <div id="btc-usdt" class="col-2 text-center">BTC</div>
-              <div id="eth-usdt" class="col-2 text-center">ETH</div>
-              <div id="bnb-usdt" class="col-2 text-center">BNB</div>
-              <div id="ada-usdt" class="col-2 text-center">ADA</div>
-              <div id="sol-usdt" class="col-2 text-center">SOL</div>
+              <div id="ticker1" class="col-2 text-center">BTC</div>
+              <div id="ticker2" class="col-2 text-center">ETH</div>
+              <div id="ticker3" class="col-2 text-center">BNB</div>
+              <div id="ticker4" class="col-2 text-center">ADA</div>
+              <div id="ticker5" class="col-2 text-center">SOL</div>
             
           </div>
 
@@ -105,109 +102,151 @@
 
         <div class="container-fluid">
             <div class="row align-items-start justify-content-center fst-italic">
-                <div id="content" class="col-sm-12 col-md-6 col-lg-4 text-wrap">
+                <div id="content" class="col-sm-12 col-md-6 col-lg-4 text-wrap text-center">
                     <h3 class="text-center text-wrap p-2" style="color:#F3B438" >Crypto Signals</h3>
                     <p class="text-center text-wrap p-2">
-                      We offer a signal service with ideas for buying and selling crypto assets in a private telegram channel, and other future services that we continue to develop. We are not financial advisers. Remember that your money is at risk in investments, both profits and losses can be obtained and you are responsible for what you do with your own money <br>
+                      We offer a signal service with ideas for buying and selling crypto assets in a private telegram channel, and other future services that we continue to develop. We are not financial advisers. Remember that your money is at risk in investments, both profits and losses can be obtained and you are responsible for what you do with your own money.<br><br>
+                      Ofrecemos un servicio de señales con ideas para la compra y venta de cripto activos en un canal privado de telegram y otros servicios futuros que continuamos desarrollando. No somos asesores financieros. Recuerda que tu dinero está en riesgo en inversiones, se pueden obtener tanto ganancias como pérdidas y tú eres responsable de lo que haces con tu propio dinero.<br><br>
                       Crypto In Time &copy;</p>
+                      
+                        <button id="toggler" class="btn btn-warning mb-4" onclick="replace()">Plans !</button>
+                        <button id="toggler-back" class="btn btn-warning mb-4" style="display:none;" onclick="back()">Back to table</button>
+                        <script>
+                          function replace() { 
+                            document.getElementById("table").style.display="none"; 
+                            document.getElementById("promos").style.display="block";
+                            document.getElementById("toggler").style.display="none"
+                            document.getElementById("toggler-back").style.display="inline";
+                          } 
+                          function back() {
+                            document.getElementById("promos").style.display="none"; 
+                            document.getElementById("table").style.display="flex";
+                            document.getElementById("toggler-back").style.display="none"
+                            document.getElementById("toggler").style.display="inline";
+                          }
+                        </script>
+                      
                 </div>
-                <div id="promos" class="col-sm-6 col-md-6 col-lg-8">
-                  <div class="row justify-content-evenly">
-                    <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
-                      1 Month<br>$15
-                      <div id="paypal-button-container-P-90G68652FM9278532MF2W6LA"></div>
-                        <script src="https://www.paypal.com/sdk/js?client-id=Abelr6kBkhdT44gdOwtlEtycTqcei8ZUmF0kwk80_YXbOra4CB3DYfI3IMfdQyvcXM6qSbdP0fz6Zy4I&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-                        <script>
-                          paypal.Buttons({
-                              style: {
-                                  shape: 'pill',
-                                  color: 'blue',
-                                  layout: 'vertical',
-                                  label: 'subscribe',
-                                  tagline: false,
-                                  height: 55,
-                                  layout: 'horizontal',
-                              },
-                              createSubscription: function(data, actions) {
-                                return actions.subscription.create({
-                                  /* Creates the subscription */
-                                  plan_id: 'P-90G68652FM9278532MF2W6LA'
-                                });
-                              },
-                              onApprove: function(data, actions) {
-                                const element = document.getElementById('paypal-button-container-P-90G68652FM9278532MF2W6LA');
-                                element.innerHTML = '';
-                                element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>'; // You can add optional success message for the subscriber here
-                              }
-                          }).render('#paypal-button-container-P-90G68652FM9278532MF2W6LA'); // Renders the PayPal button
-                        </script>
-                      
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
-                      3 Months<br>$30
-                      <div id="paypal-button-container-P-4DY28845R10229539MF2XQTY"></div>
-                        
-                        <script>
-                          paypal.Buttons({
-                              style: {
-                                  shape: 'pill',
-                                  color: 'blue',
-                                  layout: 'vertical',
-                                  label: 'subscribe',
-                                  tagline: false,
-                                  height: 55,
-                                  layout: 'horizontal',
-                              },
-                              createSubscription: function(data, actions) {
-                                return actions.subscription.create({
-                                  /* Creates the subscription */
-                                  plan_id: 'P-4DY28845R10229539MF2XQTY'
-                                });
-                              },
-                              onApprove: function(data, actions) {
-                                const element = document.getElementById('paypal-button-container-P-4DY28845R10229539MF2XQTY');
-                                element.innerHTML = '';
-                                element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>'; // You can add optional success message for the subscriber here
-                              }
-                          }).render('#paypal-button-container-P-4DY28845R10229539MF2XQTY'); // Renders the PayPal button
-                        </script>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
-                      1 Year<br>$100
-                      <div id="paypal-button-container-P-21T26025MX5228148MF2XTCI"></div>
-                        <script>
-                          paypal.Buttons({
-                              style: {
-                                  shape: 'pill',
-                                  color: 'blue',
-                                  layout: 'vertical',
-                                  label: 'subscribe',
-                                  tagline: false,
-                                  height: 55,
-                                  layout: 'horizontal',
-                              },
-                              createSubscription: function(data, actions) {
-                                return actions.subscription.create({
-                                  /* Creates the subscription */
-                                  plan_id: 'P-21T26025MX5228148MF2XTCI'
-                                });
-                              },
-                              onApprove: function(data, actions) {
-                                const element = document.getElementById('paypal-button-container-P-21T26025MX5228148MF2XTCI');
-                                element.innerHTML = '';
-                                element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>'; // You can add optional success message for the subscriber here
-                              }
-                          }).render('#paypal-button-container-P-21T26025MX5228148MF2XTCI'); // Renders the PayPal button
-                        </script>
-                      
+                <div id="toggle" class="col-sm-12 col-md-6 col-lg-8 pt-4">
+                  <div id="table" >
+                        <table class="table table-hover table-bordered align-items-center fst-normal">
+                          <thead class="table text-center text-wrap">
+                            <tr>
+                              <th scope="col">Rank</th>
+                              <th scope="col">Symbol</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">24h</th>
+                              <th scope="col">Market Cap</th>
+                            
+                            </tr>
+                          </thead>
+                          <tbody id="table-body" class="text-center text-wrap">
+                          
+                          </tbody>
+                        </table>
+                      </div>
+                  <div id="promos" style="display: none;">
+                    <div class="row justify-content-evenly">
+                      <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
+                        1 Month<br>$15
+                        <div id="paypal-button-container-P-90G68652FM9278532MF2W6LA"></div>
+                          <script src="https://www.paypal.com/sdk/js?client-id=Abelr6kBkhdT44gdOwtlEtycTqcei8ZUmF0kwk80_YXbOra4CB3DYfI3IMfdQyvcXM6qSbdP0fz6Zy4I&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+                          <script>
+                            paypal.Buttons({
+                                style: {
+                                    shape: 'pill',
+                                    color: 'blue',
+                                    layout: 'vertical',
+                                    label: 'subscribe',
+                                    tagline: false,
+                                    height: 55,
+                                    layout: 'horizontal',
+                                },
+                                createSubscription: function(data, actions) {
+                                  return actions.subscription.create({
+                                    /* Creates the subscription */
+                                    plan_id: 'P-90G68652FM9278532MF2W6LA'
+                                  });
+                                },
+                                onApprove: function(data, actions) {
+                                  const element = document.getElementById('paypal-button-container-P-90G68652FM9278532MF2W6LA');
+                                  element.innerHTML = '';
+                                  element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>'; // You can add optional success message for the subscriber here
+                                }
+                            }).render('#paypal-button-container-P-90G68652FM9278532MF2W6LA'); // Renders the PayPal button
+                          </script>
+
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
+                        3 Months<br>$30
+                        <div id="paypal-button-container-P-4DY28845R10229539MF2XQTY"></div>
+
+                          <script>
+                            paypal.Buttons({
+                                style: {
+                                    shape: 'pill',
+                                    color: 'blue',
+                                    layout: 'vertical',
+                                    label: 'subscribe',
+                                    tagline: false,
+                                    height: 55,
+                                    layout: 'horizontal',
+                                },
+                                createSubscription: function(data, actions) {
+                                  return actions.subscription.create({
+                                    /* Creates the subscription */
+                                    plan_id: 'P-4DY28845R10229539MF2XQTY'
+                                  });
+                                },
+                                onApprove: function(data, actions) {
+                                  const element = document.getElementById('paypal-button-container-P-4DY28845R10229539MF2XQTY');
+                                  element.innerHTML = '';
+                                  element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>'; // You can add optional success message for the subscriber here
+                                }
+                            }).render('#paypal-button-container-P-4DY28845R10229539MF2XQTY'); // Renders the PayPal button
+                          </script>
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
+                        1 Year<br>$100
+                        <div id="paypal-button-container-P-21T26025MX5228148MF2XTCI"></div>
+                          <script>
+                            paypal.Buttons({
+                                style: {
+                                    shape: 'pill',
+                                    color: 'blue',
+                                    layout: 'vertical',
+                                    label: 'subscribe',
+                                    tagline: false,
+                                    height: 55,
+                                    layout: 'horizontal',
+                                },
+                                createSubscription: function(data, actions) {
+                                  return actions.subscription.create({
+                                    /* Creates the subscription */
+                                    plan_id: 'P-21T26025MX5228148MF2XTCI'
+                                  });
+                                },
+                                onApprove: function(data, actions) {
+                                  const element = document.getElementById('paypal-button-container-P-21T26025MX5228148MF2XTCI');
+                                  element.innerHTML = '';
+                                  element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>'; // You can add optional success message for the subscriber here
+                                }
+                            }).render('#paypal-button-container-P-21T26025MX5228148MF2XTCI'); // Renders the PayPal button
+                          </script>
+
+                      </div>
                     </div>
                   </div>
-
                 </div>
         </div>
+        
+      </div>
+
+      
     
 
-
+        
         <script src="js/script.js"></script>
 </body>
 </html>

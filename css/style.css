@@ -115,3 +115,52 @@ a {
     font-style: normal;
     color: lightgray;
 }
+
+#table {
+    font-size: 120%;
+}
+
+#table thead {
+    color: white;
+    text-align: center;
+
+
+}
+
+#table-body {
+    border: white;
+    text-align: center;
+
+}
+
+#table-body td{
+    color: white;
+    background-color: rgba(169, 169, 169, 0.253);
+
+
+}
+#table-body th{
+    color: white;
+    background-color: rgba(169, 169, 169, 0.253);
+
+}
+
+#table-body img {
+    width: 24px;
+    height: 24px;
+
+
+}
+
+.btn.btn-warning {
+    background-color: #F3B438;
+    width: 50%;
+    line-height: 200%;
+    font-size: 120%;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.btn.btn-warning:hover {
+    background-color: #f0be5a;
+}
