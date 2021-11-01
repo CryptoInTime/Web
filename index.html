@@ -113,7 +113,10 @@
                         <button id="toggler-back" class="btn btn-warning mb-4" style="display:none;" onclick="back()">Back to table</button>
                         <script>
                           function replace() { 
-                            document.getElementById("table").style.display="none"; 
+                            document.getElementById("table").style.display="none";
+                            document.getElementById("chart").style.display="none";
+                            document.getElementById("toggler-chart").style.display="none";
+                            document.getElementById("toggler-chart-back").style.display="none";
                             document.getElementById("promos").style.display="block";
                             document.getElementById("toggler").style.display="none"
                             document.getElementById("toggler-back").style.display="inline";
@@ -121,6 +124,7 @@
                           function back() {
                             document.getElementById("promos").style.display="none"; 
                             document.getElementById("table").style.display="flex";
+                            document.getElementById("toggler-chart").style.display="inline";
                             document.getElementById("toggler-back").style.display="none"
                             document.getElementById("toggler").style.display="inline";
                           }
