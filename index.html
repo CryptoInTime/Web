@@ -127,7 +127,7 @@
                         </script>
                       
                 </div>
-                <div id="toggle" class="col-sm-12 col-md-6 col-lg-8 pt-4">
+                <div id="toggle" class="col-sm-12 col-md-6 col-lg-8 pt-4 text-center">
                   <div id="table" >
                         <table class="table table-hover table-bordered align-items-center fst-normal">
                           <thead class="table text-center text-wrap">
@@ -145,7 +145,47 @@
                           
                           </tbody>
                         </table>
-                      </div>
+                  </div>
+                        <!-- TradingView Widget BEGIN -->
+                        <div id="chart" style="height: 500px; display: none; margin-bottom: 10px;"></div>
+                          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                          <script type="text/javascript">
+                          new TradingView.widget(
+                          {
+                          "autosize": true,
+                          "symbol": "BINANCE:BTCUSDT",
+                          "interval": "D",
+                          "timezone": "Etc/UTC",
+                          "theme": "dark",
+                          "style": "1",
+                          "locale": "en",
+                          "toolbar_bg": "#f1f3f6",
+                          "enable_publishing": false,
+                          "withdateranges": true,
+                          "hide_side_toolbar": false,
+                          "allow_symbol_change": true,
+                          "container_id": "chart"
+                        }
+                          );
+                          </script>
+                          <!-- TradingView Widget END -->
+                        <button id="toggler-chart" class="btn btn-warning mb-4" onclick="replaceChart()">Charts !</button>
+                        <button id="toggler-chart-back" class="btn btn-warning mb-4" style="display:none;" onclick="backChart()">Back to table</button>
+                        <script>
+                          function replaceChart() { 
+                            document.getElementById("table").style.display="none"; 
+                            document.getElementById("chart").style.display="block";
+                            document.getElementById("toggler-chart").style.display="none"
+                            document.getElementById("toggler-chart-back").style.display="inline";
+                          } 
+                          function backChart() {
+                            document.getElementById("chart").style.display="none"; 
+                            document.getElementById("table").style.display="flex";
+                            document.getElementById("toggler-chart-back").style.display="none"
+                            document.getElementById("toggler-chart").style.display="inline";
+                          }
+                        </script>
+                        
                   <div id="promos" style="display: none;">
                     <div class="row justify-content-evenly">
                       <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
@@ -240,13 +280,7 @@
                   </div>
                 </div>
         </div>
-        
-      </div>
 
-      
-    
-
-        
         <script src="js/script.js"></script>
 </body>
 </html>
