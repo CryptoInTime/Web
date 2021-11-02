@@ -118,18 +118,20 @@ a {
 
 #table {
     font-size: 120%;
+    transition: 0.5s;
 }
 
 #table thead {
     color: white;
     text-align: center;
-
+    transition: 0.5s;
 
 }
 
 #table-body {
     border: white;
     text-align: center;
+    transition: 0.5s;
 
 }
 
@@ -138,16 +140,19 @@ a {
     background-color: rgba(169, 169, 169, 0.253);
 
 
+
 }
 #table-body th{
     color: white;
     background-color: rgba(169, 169, 169, 0.253);
+
 
 }
 
 #table-body img {
     width: 24px;
     height: 24px;
+
 
 
 }
@@ -163,4 +168,19 @@ a {
 
 .btn.btn-warning:hover {
     background-color: #f0be5a;
+}
+
+.btn.btn-primary {
+    color: white;
+    background-color: rgba(169, 169, 169, 0.253);
+    width: 20%;
+    line-height: 100%;
+    font-size: 100%;
+    font-weight: bold;
+    border-radius: 20px;
+    border-color: black;
+}
+
+.btn.btn-primary:hover {
+    background-color: rgba(212, 212, 212, 0.253);
 }

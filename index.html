@@ -109,14 +109,16 @@
                       Ofrecemos un servicio de señales con ideas para la compra y venta de cripto activos en un canal privado de telegram y otros servicios futuros que continuamos desarrollando. No somos asesores financieros. Recuerda que tu dinero está en riesgo en inversiones, se pueden obtener tanto ganancias como pérdidas y tú eres responsable de lo que haces con tu propio dinero.<br><br>
                       Crypto In Time &copy;</p>
                       
-                        <button id="toggler" class="btn btn-warning mb-4" onclick="replace()">Plans !</button>
-                        <button id="toggler-back" class="btn btn-warning mb-4" style="display:none;" onclick="back()">Back to table</button>
+                        <button id="toggler" class="btn btn-warning mb-4 shadow-none" onclick="replace()">Plans !</button>
+                        <button id="toggler-back" class="btn btn-warning mb-4 shadow-none" style="display:none;" onclick="back()">Back to table</button>
                         <script>
                           function replace() { 
                             document.getElementById("table").style.display="none";
                             document.getElementById("chart").style.display="none";
                             document.getElementById("toggler-chart").style.display="none";
                             document.getElementById("toggler-chart-back").style.display="none";
+                            document.getElementById("back").style.display="none"
+                            document.getElementById("next").style.display="none"
                             document.getElementById("promos").style.display="block";
                             document.getElementById("toggler").style.display="none"
                             document.getElementById("toggler-back").style.display="inline";
@@ -127,6 +129,8 @@
                             document.getElementById("toggler-chart").style.display="inline";
                             document.getElementById("toggler-back").style.display="none"
                             document.getElementById("toggler").style.display="inline";
+                            document.getElementById("back").style.display="inline";
+                            document.getElementById("next").style.display="inline";
                           }
                         </script>
                       
@@ -134,16 +138,8 @@
                 <div id="toggle" class="col-sm-12 col-md-6 col-lg-8 pt-4 text-center">
                   <div id="table" >
                         <table class="table table-hover table-bordered align-items-center fst-normal">
-                          <thead class="table text-center text-wrap">
-                            <tr>
-                              <th scope="col">Rank</th>
-                              <th scope="col">Symbol</th>
-                              <th scope="col">Name</th>
-                              <th scope="col">Price</th>
-                              <th scope="col">24h</th>
-                              <th scope="col">Market Cap</th>
+                          <thead id="table-head" class="table text-center text-wrap">
                             
-                            </tr>
                           </thead>
                           <tbody id="table-body" class="text-center text-wrap">
                           
@@ -173,13 +169,19 @@
                           );
                           </script>
                           <!-- TradingView Widget END -->
-                        <button id="toggler-chart" class="btn btn-warning mb-4" onclick="replaceChart()">Charts !</button>
-                        <button id="toggler-chart-back" class="btn btn-warning mb-4" style="display:none;" onclick="backChart()">Back to table</button>
+                        <div class="d-flex justify-content-around">
+                          <button id="back" class="btn btn-primary mb-4 shadow-none" onclick="backPage()">&lt Back page</button>
+                          <button id="toggler-chart" class="btn btn-warning mb-4 shadow-none" onclick="replaceChart()">Charts !</button>
+                          <button id="toggler-chart-back" class="btn btn-warning mb-4 shadow-none" style="display:none;" onclick="backChart()">Back to table</button>
+                          <button id="next" class="btn btn-primary mb-4 shadow-none" onclick="nextPage()">Next page 	&gt</button>
+                        </div>
                         <script>
                           function replaceChart() { 
                             document.getElementById("table").style.display="none"; 
                             document.getElementById("chart").style.display="block";
                             document.getElementById("toggler-chart").style.display="none"
+                            document.getElementById("back").style.display="none"
+                            document.getElementById("next").style.display="none"
                             document.getElementById("toggler-chart-back").style.display="inline";
                           } 
                           function backChart() {
@@ -187,6 +189,8 @@
                             document.getElementById("table").style.display="flex";
                             document.getElementById("toggler-chart-back").style.display="none"
                             document.getElementById("toggler-chart").style.display="inline";
+                            document.getElementById("back").style.display="inline";
+                            document.getElementById("next").style.display="inline";
                           }
                         </script>
                         

@@ -53,6 +53,8 @@ function tabla () {
 
     const showCoins = (coins) => {
         let body = ''
+        let head =''
+        head += '<tr><th scope="col">Rank</th><th scope="col">Symbol</th><th scope="col">Name</th><th scope="col">Price</th><th scope="col">24h</th><th scope="col">Market Cap</th></tr>'
         var percent = ''
         for (let i=0; i < coins.length; i++) {
             if(coins[i].price_change_percentage_24h < 0) {
@@ -60,22 +62,36 @@ function tabla () {
                 }else{
                     percent = '<td id="coin'+i+'-24h" style="background-color: #00ff0073 ;">'+coins[i].price_change_percentage_24h.toFixed(2)+'%</td>'
                 }
+            
+            
             body += '<tr><th scope="row">'+coins[i].market_cap_rank+'</th><td style="font-weight: bold;"><img src="'+coins[i].image+'" alt="'+coins[i].symbol+'"> '+coins[i].symbol.toUpperCase()+'</td><td>'+coins[i].name+'</td><td>$ '+coins[i].current_price.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 6})+'</td>'+percent+'<td id="market_cap">$ '+coins[i].market_cap.toLocaleString()+'</td></tr>'
             
-            
-        }
-        document.getElementById('table-body').innerHTML = body
-        page++
-        if(page>=6){
-            
-            page = 1
-            
-        }
-    } 
-}
+            document.getElementById('table-head').innerHTML = head
 
-tabla()
-setInterval(tabla,5000)
+            document.getElementById('table-body').innerHTML = body
+            }
+        
+        } 
+    }
+    tabla()
+    
+    function backPage() {
+        if(page>1){
+            page--
+            tabla()
+        }else{}
+    }
+    function nextPage() {
+        if(page<=49){
+            page++
+            tabla()
+        }else{
+            page=1
+            tabla()
+        }
+    }
+
+
 
 
 
