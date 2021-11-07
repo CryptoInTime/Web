@@ -184,3 +184,7 @@ a {
 .btn.btn-primary:hover {
     background-color: rgba(212, 212, 212, 0.253);
 }
+
+.SandboxRoot.env-bp-660 {
+    font-size: 500%;
+}
