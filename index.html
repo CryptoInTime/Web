@@ -99,104 +99,21 @@
 
 
         </div>
-
-        <div class="container-fluid">
-            <div class="row align-items-start justify-content-center fst-italic">
-                <div id="content" class="col-sm-12 col-md-6 col-lg-4 text-wrap text-center">
+      <div class="container-fluid">
+        <div class="container-fluid mb-3">
+            <div class="row justify-content-center fst-italic">
+                <div id="content" class="col-sm-12 col-md-6 col-lg-6 text-wrap text-center">
                     <h3 class="text-center text-wrap p-2" style="color:#F3B438" >Crypto Signals</h3>
                     <p class="text-center text-wrap p-2">
                       We offer a signal service with ideas for buying and selling crypto assets in a private telegram channel, and other future services that we continue to develop. We are not financial advisers. Remember that your money is at risk in investments, both profits and losses can be obtained and you are responsible for what you do with your own money.<br><br>
                       Ofrecemos un servicio de señales con ideas para la compra y venta de cripto activos en un canal privado de telegram y otros servicios futuros que continuamos desarrollando. No somos asesores financieros. Recuerda que tu dinero está en riesgo en inversiones, se pueden obtener tanto ganancias como pérdidas y tú eres responsable de lo que haces con tu propio dinero.<br><br>
                       Crypto In Time &copy;</p>
                       
-                        <button id="toggler" class="btn btn-warning mb-4 shadow-none" onclick="replace()">Plans !</button>
-                        <button id="toggler-back" class="btn btn-warning mb-4 shadow-none" style="display:none;" onclick="back()">Back to table</button>
-                        <script>
-                          function replace() { 
-                            document.getElementById("table").style.display="none";
-                            document.getElementById("chart").style.display="none";
-                            document.getElementById("toggler-chart").style.display="none";
-                            document.getElementById("toggler-chart-back").style.display="none";
-                            document.getElementById("back").style.display="none"
-                            document.getElementById("next").style.display="none"
-                            document.getElementById("promos").style.display="block";
-                            document.getElementById("toggler").style.display="none"
-                            document.getElementById("toggler-back").style.display="inline";
-                          } 
-                          function back() {
-                            document.getElementById("promos").style.display="none"; 
-                            document.getElementById("table").style.display="flex";
-                            document.getElementById("toggler-chart").style.display="inline";
-                            document.getElementById("toggler-back").style.display="none"
-                            document.getElementById("toggler").style.display="inline";
-                            document.getElementById("back").style.display="inline";
-                            document.getElementById("next").style.display="inline";
-                          }
-                        </script>
-                      
                 </div>
-                <div id="toggle" class="col-sm-12 col-md-6 col-lg-8 pt-4 text-center">
-                  <div id="table" >
-                        <table class="table table-hover table-bordered align-items-center fst-normal">
-                          <thead id="table-head" class="table text-center text-wrap">
-                            
-                          </thead>
-                          <tbody id="table-body" class="text-center text-wrap">
-                          
-                          </tbody>
-                        </table>
-                  </div>
-                        <!-- TradingView Widget BEGIN -->
-                        <div id="chart" style="height: 500px; display: none; margin-bottom: 10px;"></div>
-                          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                          <script type="text/javascript">
-                          new TradingView.widget(
-                          {
-                          "autosize": true,
-                          "symbol": "BINANCE:BTCUSDT",
-                          "interval": "D",
-                          "timezone": "Etc/UTC",
-                          "theme": "dark",
-                          "style": "1",
-                          "locale": "en",
-                          "toolbar_bg": "#f1f3f6",
-                          "enable_publishing": false,
-                          "withdateranges": true,
-                          "hide_side_toolbar": false,
-                          "allow_symbol_change": true,
-                          "container_id": "chart"
-                        }
-                          );
-                          </script>
-                          <!-- TradingView Widget END -->
-                        <div class="d-flex justify-content-around">
-                          <button id="back" class="btn btn-primary mb-4 shadow-none" onclick="backPage()">&lt Back page</button>
-                          <button id="toggler-chart" class="btn btn-warning mb-4 shadow-none" onclick="replaceChart()">Charts !</button>
-                          <button id="toggler-chart-back" class="btn btn-warning mb-4 shadow-none" style="display:none;" onclick="backChart()">Back to table</button>
-                          <button id="next" class="btn btn-primary mb-4 shadow-none" onclick="nextPage()">Next page 	&gt</button>
-                        </div>
-                        <script>
-                          function replaceChart() { 
-                            document.getElementById("table").style.display="none"; 
-                            document.getElementById("chart").style.display="block";
-                            document.getElementById("toggler-chart").style.display="none"
-                            document.getElementById("back").style.display="none"
-                            document.getElementById("next").style.display="none"
-                            document.getElementById("toggler-chart-back").style.display="inline";
-                          } 
-                          function backChart() {
-                            document.getElementById("chart").style.display="none"; 
-                            document.getElementById("table").style.display="flex";
-                            document.getElementById("toggler-chart-back").style.display="none"
-                            document.getElementById("toggler-chart").style.display="inline";
-                            document.getElementById("back").style.display="inline";
-                            document.getElementById("next").style.display="inline";
-                          }
-                        </script>
-                        
-                  <div id="promos" style="display: none;">
-                    <div class="row justify-content-evenly">
-                      <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                  <div id="promos">
+                    <div class="row h-100 align-items-center">
+                      <div class="col-sm-12 col-md-12 col-lg-12 justify-content-center">
                         1 Month<br>$15
                         <div id="paypal-button-container-P-90G68652FM9278532MF2W6LA"></div>
                           <script src="https://www.paypal.com/sdk/js?client-id=Abelr6kBkhdT44gdOwtlEtycTqcei8ZUmF0kwk80_YXbOra4CB3DYfI3IMfdQyvcXM6qSbdP0fz6Zy4I&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
@@ -226,7 +143,7 @@
                           </script>
 
                       </div>
-                      <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
+                      <div class="col-sm-12 col-md-12 col-lg-12 justify-content-center">
                         3 Months<br>$30
                         <div id="paypal-button-container-P-4DY28845R10229539MF2XQTY"></div>
 
@@ -255,7 +172,7 @@
                             }).render('#paypal-button-container-P-4DY28845R10229539MF2XQTY'); // Renders the PayPal button
                           </script>
                       </div>
-                      <div class="col-sm-12 col-md-12 col-lg-4 justify-content-center">
+                      <div class="col-sm-12 col-md-12 col-lg-12 justify-content-center">
                         1 Year<br>$100
                         <div id="paypal-button-container-P-21T26025MX5228148MF2XTCI"></div>
                           <script>
@@ -289,22 +206,93 @@
                 </div>
               </div>
             </div>
+
             <div class="container-fluid">
               <div class="row align-items-start justify-content-center">
-                <div id="twitter-container" class="col-12 col-sm-12 col-md-8 col-lg-6 justify-content-center text-center">
-                  <a class="twitter-timeline" data-lang="en" data-height="700" data-width="80%" data-theme="dark" href="https://twitter.com/CryptoInTime/lists/1457299319300804608?ref_src=twsrc%5Etfw">
-                  </a> 
-                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                  <div id="twitter-container" class="col-12 col-sm-12 col-md-12 col-lg-6 justify-content-center text-center mb-3 p-0">
+                    <a class="twitter-timeline" data-lang="en" data-height="700" data-width="95%" data-theme="dark" href="https://twitter.com/CryptoInTime/lists/1457299319300804608?ref_src=twsrc%5Etfw">
+                    </a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                  <div id="twitter-container2" class="col-12 col-sm-12 col-md-12 col-lg-6 justify-content-center text-center mb-3 p-0">
+                    <a class="twitter-timeline" data-lang="en" data-height="700" data-width="95%" data-theme="dark" href="https://twitter.com/CryptoInTime/lists/1459635651540889613?ref_src=twsrc%5Etfw">
+                    </a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+
+              </div>
+            </div>
+           <div class="container-flex mb-2">
+              <div class="row align-items-center justify-content-center">
+                <div id="toggle" class="col-sm-12 col-md-12 col-lg-10 text-center">
+                  <div id="table" >
+                        <table class="table table-hover table-bordered align-items-center fst-normal">
+                          <thead id="table-head" class="table text-center">
+                            
+                          </thead>
+                          <tbody id="table-body" class="text-center">
+                         
+                          </tbody>
+                        </table>
+
+                  </div>
+
+                        <div id="chart" style="display: none; margin-bottom: 10px;"></div>
+                          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                          <script type="text/javascript">
+                          new TradingView.widget(
+                          {
+                          "autosize": true,
+                          "symbol": "BINANCE:BTCUSDT",
+                          "interval": "D",
+                          "timezone": "Etc/UTC",
+                          "theme": "dark",
+                          "style": "1",
+                          "locale": "en",
+                          "toolbar_bg": "#f1f3f6",
+                          "enable_publishing": false,
+                          "withdateranges": true,
+                          "hide_side_toolbar": false,
+                          "allow_symbol_change": true,
+                          "container_id": "chart"
+                        }
+                          );
+                          </script>
+
+                        <div class="d-flex justify-content-around">
+                          <button id="back" class="btn btn-primary mb-2 shadow-none" onclick="backPage()">&lt Back page</button>
+                          <button id="toggler-chart" class="btn btn-warning mb-2 shadow-none" onclick="replaceChart()">Charts !</button>
+                          <button id="toggler-chart-back" class="btn btn-warning mb-2 shadow-none" style="display:none;" onclick="backChart()">Back to table</button>
+                          <button id="next" class="btn btn-primary mb-2 shadow-none" onclick="nextPage()">Next page 	&gt</button>
+                        </div>
+                        <script>
+                          function replaceChart() { 
+                            document.getElementById("table").style.display="none"; 
+                            document.getElementById("chart").style.display="block";
+                            document.getElementById("toggler-chart").style.display="none"
+                            document.getElementById("back").style.display="none"
+                            document.getElementById("next").style.display="none"
+                            document.getElementById("toggler-chart-back").style.display="inline";
+                          } 
+                          function backChart() {
+                            document.getElementById("chart").style.display="none"; 
+                            document.getElementById("table").style.display="flex";
+                            document.getElementById("toggler-chart-back").style.display="none"
+                            document.getElementById("toggler-chart").style.display="inline";
+                            document.getElementById("back").style.display="inline";
+                            document.getElementById("next").style.display="inline";
+                          }
+                        </script>
+                        
+
                 </div>
               </div>
             </div>
+          </div>
 
 
         <script src="js/script.js"></script>
 </body>
 </html>
 
-                          <!--  const element = document.getElementById('paypal-button-container-P-4SJ088006Y3852803MFZMSHA');
-                                element.innerHTML = '';
-                                element.innerHTML = '<h3>Done!<br>Thank you for your payment and enjoy the subscription!</h3>';
-                              -->

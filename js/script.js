@@ -54,17 +54,17 @@ function tabla () {
     const showCoins = (coins) => {
         let body = ''
         let head =''
-        head += '<tr><th scope="col">Rank</th><th scope="col">Symbol</th><th scope="col">Name</th><th scope="col">Price</th><th scope="col">24h</th><th scope="col">Market Cap</th></tr>'
+        head += '<tr valign="middle" style="padding:1px; margin:0px;"><th scope="col">#</th><th scope="col">Symbol</th><th scope="col">Name</th><th scope="col">Price</th><th scope="col">24h</th><th scope="col" class="m-cap">Market Cap</th></tr>'
         var percent = ''
         for (let i=0; i < coins.length; i++) {
             if(coins[i].price_change_percentage_24h < 0) {
-                percent = '<td id="coin'+i+'-24h" style="background-color: #ff000082 ;">'+coins[i].price_change_percentage_24h.toFixed(2)+'%</td>'
+                percent = '<td id="coin'+i+'-24h" class="percent" style="background-color: #ff000082 ;">'+coins[i].price_change_percentage_24h.toFixed(2)+'%</td>'
                 }else{
-                    percent = '<td id="coin'+i+'-24h" style="background-color: #00ff0073 ;">'+coins[i].price_change_percentage_24h.toFixed(2)+'%</td>'
+                    percent = '<td id="coin'+i+'-24h" class="percent" style="background-color: #00ff0073 ;">'+coins[i].price_change_percentage_24h.toFixed(2)+'%</td>'
                 }
             
             
-            body += '<tr><th scope="row">'+coins[i].market_cap_rank+'</th><td style="font-weight: bold;"><img src="'+coins[i].image+'" alt="'+coins[i].symbol+'"> '+coins[i].symbol.toUpperCase()+'</td><td>'+coins[i].name+'</td><td>$ '+coins[i].current_price.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 6})+'</td>'+percent+'<td id="market_cap">$ '+coins[i].market_cap.toLocaleString()+'</td></tr>'
+            body += '<tr valign="middle" style="padding:1px; margin:0px;" ><th scope="row">'+coins[i].market_cap_rank+'</th><td class="t-symbol" style="font-weight: bold;"><img src="'+coins[i].image+'" alt="'+coins[i].symbol+'"> '+coins[i].symbol.toUpperCase()+'</td><td>'+coins[i].name+'</td><td class="t-price">$&nbsp;'+coins[i].current_price.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})+'</td>'+percent+'<td id="market_cap" class="m-cap">$&nbsp;'+coins[i].market_cap.toLocaleString()+'</td></tr>'
             
             document.getElementById('table-head').innerHTML = head
 
@@ -82,7 +82,7 @@ function tabla () {
         }else{}
     }
     function nextPage() {
-        if(page<=49){
+        if(page<=499){
             page++
             tabla()
         }else{

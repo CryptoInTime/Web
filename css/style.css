@@ -15,6 +15,7 @@ body {
     background-image: url(../images/CIT-LOGO-BN-FONDO.png) ;
     color:whitesmoke;
     background-color: black;
+    max-width: 100vw;
     
     
 }
@@ -77,6 +78,7 @@ header {
     padding: 1%;
     color: white;
     border-radius: 30px;
+    font-size: 125%;
 }
 
 #promos {
@@ -87,9 +89,10 @@ header {
     justify-content: center;
     padding: 1%;
     color: white;
-    height: 500px;
+    height: 100%;
+    align-content: space-around;
     border-radius: 30px;
-    text-align: center;
+    text-align:center;
 }
 
 a {
@@ -118,20 +121,20 @@ a {
 
 #table {
     font-size: 120%;
-    transition: 0.5s;
+
 }
 
 #table thead {
     color: white;
     text-align: center;
-    transition: 0.5s;
+
+
 
 }
 
 #table-body {
     border: white;
     text-align: center;
-    transition: 0.5s;
 
 }
 
@@ -187,4 +190,45 @@ a {
 
 .SandboxRoot.env-bp-660 {
     font-size: 500%;
+}
+#table .t-symbol {
+    white-space: nowrap;
+    overflow: hidden;
+}
+#chart {
+    height: 85vh;
+}
+
+@media (max-width: 575.98px) { 
+    #toggle { 
+        font-size: 70%;
+        width: 95vw;
+        padding: 0px;
+        margin: 0px;
+    }
+    #table {
+
+    }
+
+    #table tr{
+        height: 59.5px;
+        max-height: 100%;
+        line-height:100%;
+
+    }
+    #table .m-cap {
+        display: none;
+    }
+
+    #table .t-price{
+        font-size: 100%;
+    }
+    #table .percent {
+        font-size: 100%;
+    }
+    #table-body img {
+        width: 16px;
+        height: 16px;
+    }
+
 }
